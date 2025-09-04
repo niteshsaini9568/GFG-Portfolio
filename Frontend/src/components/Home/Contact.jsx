@@ -2,6 +2,7 @@ import { Send, Mail, Phone, Globe, MapPin } from 'lucide-react';
 import { useState } from 'react';
 import { handleError, handleSuccess } from '../Includes/Utils';
 
+
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -28,7 +29,7 @@ const ContactSection = () => {
     setStatusMessage('');
 
     try {
-      const url = '#'; 
+      const url = `http://localhost:8080/contact`; 
       const response = await fetch(url, {
         method: 'POST',
         headers: {
